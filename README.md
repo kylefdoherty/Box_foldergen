@@ -1,0 +1,1 @@
+This script autogenerates a specific folder structure inside a folder in box once it is generated. For example, when a Box folder is automatically created for a new opportunity in SalesForce that box folder is autopopulated with the subfolders defined in this script.
