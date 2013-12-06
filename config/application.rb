@@ -51,9 +51,14 @@ eresp.events.each_with_index do |ev, index|
 				f_id = ev.source.id
 				f_name = ev.source.name
 				p f_name
-				#add an if statement to check for file already existing 
-				 client.folder("SFDC/#{f_name}").create_subfolder('CLIENT-FOLDER')
-  			end
+
+				f_status = ev.item_status
+					begin 
+					#add an if statement to check for file already existing 
+				 	client.folder("SFDC/#{f_name}").create_subfolder('CLIENT-FOLDER')
+				    rescue
+				    end 
+		    end
   		end 
 
   	end 
