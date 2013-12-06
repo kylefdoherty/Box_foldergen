@@ -1,5 +1,6 @@
 #require 'rails/all'
 require 'ruby-box'
+require 'sinatra'
 require 'yaml'
 
 
