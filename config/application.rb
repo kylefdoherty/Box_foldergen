@@ -3,7 +3,7 @@ require 'ruby-box'
 require 'yaml'
 
 
-CONFIG_FILE = 'application.yml'
+CONFIG_FILE = 'config/application.yml'
 ENV = YAML.load_file(CONFIG_FILE)
 
 
