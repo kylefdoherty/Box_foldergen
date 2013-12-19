@@ -64,6 +64,7 @@ eresp.events.each_with_index do |ev, index|
   		end 
 
   	end 
+  end 
 
 
 
