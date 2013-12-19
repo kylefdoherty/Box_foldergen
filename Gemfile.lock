@@ -42,5 +42,6 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
+  json
   ruby-box
   sinatra

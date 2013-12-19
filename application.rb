@@ -2,6 +2,7 @@
 require 'ruby-box'
 require 'sinatra'
 require 'yaml'
+require 'json'
 
 
 CONFIG_FILE = 'application.yml'
