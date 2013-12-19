@@ -75,7 +75,6 @@ post '/log' do
   # Do something with event_json
 end
 
-end
 
 
 
