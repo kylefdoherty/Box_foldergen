@@ -40,30 +40,40 @@ end
 # client.folder.create_subfolder('Test27')
 # puts "I created a new folder with the script"
 
-eresp = client.event_response(stream_position=0, stream_type=:all, limit=500)
-p eresp.chunk_size
+# eresp = client.event_response(stream_position=0, stream_type=:all, limit=500)
+# p eresp.chunk_size
 
 
 
-eresp.events.each_with_index do |ev, index|
-	if ev.created_by.name == "Kyle D"
+# eresp.events.each_with_index do |ev, index|
+# 	if ev.created_by.name == "Kyle D"
 		
-		if ev.event_type == "ITEM_CREATE"
-			if ev.source.parent.name == "SFDC"
-				f_id = ev.source.id
-				f_name = ev.source.name
-				p f_name
+# 		if ev.event_type == "ITEM_CREATE"
+# 			if ev.source.parent.name == "SFDC"
+# 				f_id = ev.source.id
+# 				f_name = ev.source.name
+# 				p f_name
 
-				f_status = ev.item_status
-					begin 
-					#add an if statement to check for file already existing 
-				 	client.folder("SFDC/#{f_name}").create_subfolder('CLIENT-FOLDER')
-				    rescue
-				    end 
-		    end
-  		end 
+# 				f_status = ev.item_status
+# 					begin 
+# 					#add an if statement to check for file already existing 
+# 				 	client.folder("SFDC/#{f_name}").create_subfolder('CLIENT-FOLDER')
+# 				    rescue
+# 				    end 
+# 		    end
+#   		end 
 
-  	end 
+#   	end 
+
+
+
+post '/log' do
+  # Retrieve the request's body and parse it as JSON
+  event_json = JSON.parse(request.body.read)
+  p event_json
+
+  # Do something with event_json
+end
 
 end
 
