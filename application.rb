@@ -37,10 +37,6 @@ end
   
 
 
-client.folder.create_subfolder('Test27')
-get '/' do  
-	"I created a new folder with the script"
-end 
 
 eresp = client.event_response(stream_position=0, stream_type=:all, limit=500)
 p eresp.chunk_size
@@ -61,7 +57,7 @@ eresp.events.each_with_index do |ev, index|
 					#add an if statement to check for file already existing 
 				 	client.folder("SFDC/#{f_name}").create_subfolder('CLIENT-FOLDER')
 				 	get '/' do 
-				 		'Client folder created in #{f_name}'
+				 		"Client folder created in #{f_name}"
 				 	end 
 				    rescue
 				    end 
