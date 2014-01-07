@@ -30,10 +30,14 @@ client = RubyBox::Client.new(session)
 ENV["access_token"] = @token.token
 ENV["refresh_token"] = @token.refresh_token
 
-File.open(CONFIG_FILE, "w") do |file|
-  file.write(YAML.dump(ENV))
-  puts "Wrote new configuration with access_token and refresh_token to #{CONFIG_FILE}"
-end
+#resetting the config vars...I hope
+heroku config:set access_token=ENV["access_token"] refresh_token=ENV["refresh_token"]
+
+
+# File.open(CONFIG_FILE, "w") do |file|
+#   file.write(YAML.dump(ENV))
+#   puts "Wrote new configuration with access_token and refresh_token to #{CONFIG_FILE}"
+# end
   
 
 
