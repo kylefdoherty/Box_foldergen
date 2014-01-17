@@ -1,0 +1,4 @@
+- figure out how to setup an env file as mentioned here, http://stackoverflow.com/questions/15466627/environment-variables-locally-and-heroku
+	- 
+
+- figure out how to update the config vars in real time
