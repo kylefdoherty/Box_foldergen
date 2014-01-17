@@ -68,6 +68,7 @@ eresp.events.each_with_index do |ev, index|
 
 
 
+
 # post '/log' do
 #   # Retrieve the request's body and parse it as JSON
 #   event_json = JSON.parse(request.body.read)
